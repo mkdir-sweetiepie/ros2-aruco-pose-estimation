@@ -26,6 +26,7 @@ Parameters:
     image_topic - image topic to subscribe to (default /camera/color/image_raw)
     camera_info_topic - camera info topic to subscribe to (default /camera/camera_info)
     camera_frame - camera optical frame to use (default "camera_depth_optical_frame")
+    
     detected_markers_topic - topic to publish detected markers (default /aruco_markers)
     markers_visualization_topic - topic to publish markers visualization (default /aruco_poses)
     output_image_topic - topic to publish annotated image (default /aruco_image)

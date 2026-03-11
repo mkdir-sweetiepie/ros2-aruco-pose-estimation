@@ -8,21 +8,21 @@
         aruco_dictionary_id: DICT_4X4_50
 
         # ai_worker camera_realsense.launch.py 기준 실제 토픽 이름
-        # camera_namespace=camera_left, camera_name=camera_left 로 설정되어 있어서
-        # 토픽이 /camera_left/camera_left/... 형태로 생성됨
-        image_topic: /camera_left/camera_left/color/image_raw
+        # camera_namespace=camera_l, camera_name=camera_l 로 설정되어 있어서
+        # 토픽이 /camera_l/camera_l/... 형태로 생성됨
+        image_topic: /camera_l/camera_l/color/image_rect_raw
 
         # D405는 depth가 color에 이미 정렬되어 있어서 true로 설정 가능
         # aligned_depth_to_color 토픽이 없고 depth/image_rect_raw를 직접 씀
         use_depth_input: true
-        depth_image_topic: /camera_left/camera_left/depth/image_rect_raw
-        camera_info_topic: /camera_left/camera_left/color/camera_info
+        depth_image_topic: /camera_l/camera_l/depth/image_rect_raw
+        camera_info_topic: /camera_l/camera_l/color/camera_info
 
         # realsense 드라이버가 생성하는 TF frame 이름
-        # camera_name이 camera_left이므로 frame도 camera_left_color_optical_frame
-        camera_frame: camera_left_color_optical_frame
+        # camera_name이 camera_l이므로 frame도 camera_l_color_optical_frame
+        camera_frame: camera_l_color_optical_frame
 
         # bridge 노드가 구독할 출력 토픽 — 왼팔/오른팔 구분을 위해 네임스페이스 추가
-        detected_markers_topic: /left/aruco/markers
-        markers_visualization_topic: /left/aruco/poses
-        output_image_topic: /left/aruco/image
+        detected_markers_topic: /l/aruco/markers
+        markers_visualization_topic: /l/aruco/poses
+        output_image_topic: /l/aruco/image
